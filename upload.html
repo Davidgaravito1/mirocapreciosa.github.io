@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Imagen - Mi Roca Preciosa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <nav id="barra" class="navbar navbar-expand-md fixed-top navbar-light">
+        <a id="name" class="navbar-brand" href="#">Mi Roca Preciosa</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Principal<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="vestidos.html">Vestidos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="chaquetas.html">Chaquetas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="blusas.html">Blusas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pantalones.html">Pantalones</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container" style="margin-top: 70px;">
+        <h1>Agregar Imagen</h1>
+        <form id="imageForm" action="upload.php" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="image">Seleccionar imagen:</label>
+                <input type="file" id="image" name="image" accept="image/*" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="section">Seleccionar sección:</label>
+                <select id="section" name="section" class="form-control" required>
+                    <option value="principal">Principal</option>
+                    <option value="vestidos">Vestidos</option>
+                    <option value="chaquetas">Chaquetas</option>
+                    <option value="blusas">Blusas</option>
+                    <option value="pantalones">Pantalones</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Agregar Imagen</button>
+        </form>
+    </div>
+</body>
+</html>
